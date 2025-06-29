@@ -1,10 +1,9 @@
 [project]
-name = "taxman2"
+name = "HCSE"
 version = "0.1.0"
-description = "Add your description here"
+description = "The hackclub stock exchange!"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "flask>=3.1.1",
-    "helium>=5.1.1",
 ]
