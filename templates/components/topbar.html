@@ -1,14 +1,37 @@
 <div class="navbar">
 	<style>
-		.navbar {
-			background-color: #2f342f;
-			color: #ffffff;
-			width: 100%;
-			flex-grow: 1;
-		}
+	.navbar {
+		background-color: #2f342f;
+		color: #ffffff;
+		width: 100%;
+		flex-grow: 1;
+	}
+	.navbar > nav{
+		height: 100%;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-content: stretch;
+		align-items: stretch;
+	}
+	.navbar > nav > a {
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-style: solid;
+		border-right: none;
+		border-color: #2f402f;
+	}
+	
+	.navbar > nav > a:last-child {
+		border-right: solid;
+		border-right-color: #2f402f;
+	}
 	</style>
 	<nav>
-		<ul>
-		</ul>
+		<a hx-target="main" hx-get="/pages/home.html"><p>Home</p></a>
+		<a hx-target="main" hx-get="/pages/signup.html"><p>Signup</p></a>
+		<a hx-target="main" hx-get="/pages/login.html"><p>Login</p></a>
 	</nav>
 </div>
