@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<style>
+			body {
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+				margin: 0;
+				font-family: "Urbanist", sans-serif;
+			}
+			body > main{
+				width: 100%;
+				flex: 5 1 0;
+				background-color: #053230;
+				color: #ffffff;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			main > div {
+				flex-growth: 1;
+			}
+		</style>
+
+		<script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.6/dist/htmx.min.js"></script>
+	</head>
+	<div hx-get="/components/topbar.html" hx-trigger="load" hx-swap="outerHTML" hx-target="this"></div>
+	<main>
+		<div hx-get="/pages/home.html" class="homeloader" hx-trigger="load" hx-target="main"></div>
+	</main>
+</html>
